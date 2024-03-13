@@ -27,7 +27,7 @@ RUN useradd \
 
 RUN apt-get update -yq
 
-RUN apt-get install -yq sudo
+RUN apt-get install -yq sudo rsync
 RUN echo "${ENGFLOW_RBE_USER_NAME} ALL=(ALL) NOPASSWD:ALL" > "/etc/sudoers.d/${ENGFLOW_RBE_USER_NAME}"
 RUN chmod 0440 "/etc/sudoers.d/${ENGFLOW_RBE_USER_NAME}"
 
