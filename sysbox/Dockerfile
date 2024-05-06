@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 
 RUN apt-get update -yq
-RUN apt-get install -yq ca-certificates curl gnupg
+RUN apt-get install -yq ca-certificates curl gnupg lcov
 RUN install -m 0755 -d /etc/apt/keyrings
 RUN curl --insecure -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 RUN chmod a+r /etc/apt/keyrings/docker.gpg
